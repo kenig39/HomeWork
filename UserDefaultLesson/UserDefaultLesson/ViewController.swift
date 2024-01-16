@@ -75,9 +75,11 @@ class ViewController: UIViewController {
         fieldTitle.delegate = self
         saveButton.addTarget(self, action: #selector(upDateSaveData), for: .touchUpInside)
         view.addSubview(saveButton)
+        
         savedName = UserDefaults.standard.string(forKey: Keys.studentName)
         savedAge = UserDefaults.standard.integer(forKey: Keys.studentAge)
-         nsLoyoutConstraint()
+         
+        nsLoyoutConstraint()
         upDateSaveData()
         
     }
